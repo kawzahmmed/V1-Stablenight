@@ -1,0 +1,1531 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="notebook" data-mode="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kawsar Ahmmed Mridul - Interactive Profile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Patrick+Hand&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Shared CSS Variables Across Themes */
+        :root {
+            --font-main: 'Plus Jakarta Sans', sans-serif;
+            --font-hand: 'Patrick Hand', cursive;
+            --font-heading: 'Caveat', cursive;
+        }
+
+        /* LIGHT PALETTES */
+        :root[data-mode="light"][data-theme="notebook"] {
+            --paper-bg: #fbf8f3;
+            --ink-primary: #1e242b;
+            --ink-secondary: #4a5568;
+            --pencil-line: #cbd5e1;
+            --highlight-accent: #fef08a;
+            --highlight-subtle: #a5f3fc;
+            --card-bg: #ffffff;
+            --nav-bg: rgba(251, 248, 243, 0.85);
+            --sketch-shadow: 4px 5px 0px #1e242b;
+            --sketch-shadow-hover: 7px 8px 0px #1e242b;
+            --svg-stroke: #1e242b;
+            --accent-border: #1e242b;
+            --wave-fill: rgba(30, 36, 43, 0.08);
+            --wave-accent: #fef08a;
+        }
+
+        :root[data-mode="light"][data-theme="blueprint"] {
+            --paper-bg: #f0f7ff;
+            --ink-primary: #0f4c81;
+            --ink-secondary: #3b82f6;
+            --pencil-line: #bfdbfe;
+            --highlight-accent: #93c5fd;
+            --highlight-subtle: #e0f2fe;
+            --card-bg: #ffffff;
+            --nav-bg: rgba(240, 247, 255, 0.85);
+            --sketch-shadow: 4px 5px 0px #0f4c81;
+            --sketch-shadow-hover: 7px 8px 0px #0f4c81;
+            --svg-stroke: #0f4c81;
+            --accent-border: #0f4c81;
+            --wave-fill: rgba(15, 76, 129, 0.1);
+            --wave-accent: #93c5fd;
+        }
+
+        :root[data-mode="light"][data-theme="emerald"] {
+            --paper-bg: #f0fdf4;
+            --ink-primary: #064e3b;
+            --ink-secondary: #047857;
+            --pencil-line: #a7f3d0;
+            --highlight-accent: #6ee7b7;
+            --highlight-subtle: #dcfce7;
+            --card-bg: #ffffff;
+            --nav-bg: rgba(240, 253, 244, 0.85);
+            --sketch-shadow: 4px 5px 0px #064e3b;
+            --sketch-shadow-hover: 7px 8px 0px #064e3b;
+            --svg-stroke: #064e3b;
+            --accent-border: #064e3b;
+            --wave-fill: rgba(6, 78, 59, 0.08);
+            --wave-accent: #6ee7b7;
+        }
+
+        :root[data-mode="light"][data-theme="terracotta"] {
+            --paper-bg: #fff7ed;
+            --ink-primary: #431407;
+            --ink-secondary: #9a3412;
+            --pencil-line: #fed7aa;
+            --highlight-accent: #fdba74;
+            --highlight-subtle: #ffedd5;
+            --card-bg: #ffffff;
+            --nav-bg: rgba(255, 247, 237, 0.85);
+            --sketch-shadow: 4px 5px 0px #431407;
+            --sketch-shadow-hover: 7px 8px 0px #431407;
+            --svg-stroke: #431407;
+            --accent-border: #431407;
+            --wave-fill: rgba(67, 20, 7, 0.08);
+            --wave-accent: #fdba74;
+        }
+
+        :root[data-mode="light"][data-theme="sakura"] {
+            --paper-bg: #fff5f7;
+            --ink-primary: #701a75;
+            --ink-secondary: #a21caf;
+            --pencil-line: #fbcfe8;
+            --highlight-accent: #f472b6;
+            --highlight-subtle: #fce7f3;
+            --card-bg: #ffffff;
+            --nav-bg: rgba(255, 245, 247, 0.85);
+            --sketch-shadow: 4px 5px 0px #701a75;
+            --sketch-shadow-hover: 7px 8px 0px #701a75;
+            --svg-stroke: #701a75;
+            --accent-border: #701a75;
+            --wave-fill: rgba(112, 26, 117, 0.08);
+            --wave-accent: #f472b6;
+        }
+
+        :root[data-mode="light"][data-theme="sunshine"] {
+            --paper-bg: #fefce8;
+            --ink-primary: #713f12;
+            --ink-secondary: #ca8a04;
+            --pencil-line: #fef08a;
+            --highlight-accent: #fde047;
+            --highlight-subtle: #fef9c3;
+            --card-bg: #ffffff;
+            --nav-bg: rgba(254, 252, 232, 0.85);
+            --sketch-shadow: 4px 5px 0px #713f12;
+            --sketch-shadow-hover: 7px 8px 0px #713f12;
+            --svg-stroke: #713f12;
+            --accent-border: #713f12;
+            --wave-fill: rgba(113, 63, 18, 0.08);
+            --wave-accent: #fde047;
+        }
+
+        /* DARK / NIGHT PALETTES */
+        :root[data-mode="dark"][data-theme="midnight"] {
+            --paper-bg: #0f172a;
+            --ink-primary: #f8fafc;
+            --ink-secondary: #94a3b8;
+            --pencil-line: #334155;
+            --highlight-accent: #38bdf8;
+            --highlight-subtle: #1e293b;
+            --card-bg: #1e293b;
+            --nav-bg: rgba(15, 23, 42, 0.85);
+            --sketch-shadow: 4px 5px 0px #38bdf8;
+            --sketch-shadow-hover: 7px 8px 0px #38bdf8;
+            --svg-stroke: #f8fafc;
+            --accent-border: #38bdf8;
+            --wave-fill: rgba(56, 189, 248, 0.15);
+            --wave-accent: #38bdf8;
+        }
+
+        :root[data-mode="dark"][data-theme="cyberpunk"] {
+            --paper-bg: #180828;
+            --ink-primary: #f43f5e;
+            --ink-secondary: #e879f9;
+            --pencil-line: #581c87;
+            --highlight-accent: #06b6d4;
+            --highlight-subtle: #3b0764;
+            --card-bg: #2e1065;
+            --nav-bg: rgba(24, 8, 40, 0.85);
+            --sketch-shadow: 4px 5px 0px #06b6d4;
+            --sketch-shadow-hover: 7px 8px 0px #06b6d4;
+            --svg-stroke: #f43f5e;
+            --accent-border: #06b6d4;
+            --wave-fill: rgba(6, 182, 212, 0.2);
+            --wave-accent: #f43f5e;
+        }
+
+        :root[data-mode="dark"][data-theme="obsidian"] {
+            --paper-bg: #121212;
+            --ink-primary: #e2e8f0;
+            --ink-secondary: #94a3b8;
+            --pencil-line: #27272a;
+            --highlight-accent: #f59e0b;
+            --highlight-subtle: #27272a;
+            --card-bg: #18181b;
+            --nav-bg: rgba(18, 18, 18, 0.85);
+            --sketch-shadow: 4px 5px 0px #f59e0b;
+            --sketch-shadow-hover: 7px 8px 0px #f59e0b;
+            --svg-stroke: #e2e8f0;
+            --accent-border: #f59e0b;
+            --wave-fill: rgba(245, 158, 11, 0.15);
+            --wave-accent: #f59e0b;
+        }
+
+        :root[data-mode="dark"][data-theme="deepforest"] {
+            --paper-bg: #062319;
+            --ink-primary: #ecfdf5;
+            --ink-secondary: #6ee7b7;
+            --pencil-line: #065f46;
+            --highlight-accent: #10b981;
+            --highlight-subtle: #022c22;
+            --card-bg: #064e3b;
+            --nav-bg: rgba(6, 35, 25, 0.85);
+            --sketch-shadow: 4px 5px 0px #10b981;
+            --sketch-shadow-hover: 7px 8px 0px #10b981;
+            --svg-stroke: #ecfdf5;
+            --accent-border: #10b981;
+            --wave-fill: rgba(16, 185, 129, 0.18);
+            --wave-accent: #10b981;
+        }
+
+        :root[data-mode="dark"][data-theme="vampire"] {
+            --paper-bg: #1a0505;
+            --ink-primary: #fecdd3;
+            --ink-secondary: #fda4af;
+            --pencil-line: #881337;
+            --highlight-accent: #e11d48;
+            --highlight-subtle: #4c0519;
+            --card-bg: #2c0b0e;
+            --nav-bg: rgba(26, 5, 5, 0.85);
+            --sketch-shadow: 4px 5px 0px #e11d48;
+            --sketch-shadow-hover: 7px 8px 0px #e11d48;
+            --svg-stroke: #fecdd3;
+            --accent-border: #e11d48;
+            --wave-fill: rgba(225, 29, 72, 0.18);
+            --wave-accent: #e11d48;
+        }
+
+        :root[data-mode="dark"][data-theme="synthwave"] {
+            --paper-bg: #0d0221;
+            --ink-primary: #ff71ce;
+            --ink-secondary: #01cdfe;
+            --pencil-line: #241734;
+            --highlight-accent: #05ffa1;
+            --highlight-subtle: #190a38;
+            --card-bg: #1a0c36;
+            --nav-bg: rgba(13, 2, 33, 0.85);
+            --sketch-shadow: 4px 5px 0px #01cdfe;
+            --sketch-shadow-hover: 7px 8px 0px #01cdfe;
+            --svg-stroke: #ff71ce;
+            --accent-border: #01cdfe;
+            --wave-fill: rgba(1, 205, 254, 0.2);
+            --wave-accent: #ff71ce;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--paper-bg);
+            background-image: 
+                radial-gradient(var(--pencil-line) 1px, transparent 1px),
+                linear-gradient(to right, rgba(0, 0, 0, 0.015) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(0, 0, 0, 0.015) 1px, transparent 1px);
+            background-size: 24px 24px, 48px 48px, 48px 48px;
+            color: var(--ink-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding-top: 120px;
+            padding-bottom: 60px;
+            overflow-x: hidden;
+        }
+
+        .handwritten { 
+            font-family: var(--font-heading); 
+            font-weight: 700;
+        }
+        
+        .hand-label { 
+            font-family: var(--font-hand); 
+            font-weight: 400;
+        }
+
+        .sketch-icon {
+            width: 22px;
+            height: 22px;
+            stroke: var(--svg-stroke);
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            fill: none;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .sketch-box {
+            background: var(--card-bg);
+            border: 2.5px solid var(--accent-border);
+            border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+            box-shadow: var(--sketch-shadow);
+            position: relative;
+        }
+
+        .sketch-box:hover {
+            transform: translate(-2px, -2px) rotate(-0.2deg);
+            box-shadow: var(--sketch-shadow-hover);
+        }
+
+        .sketch-btn {
+            font-family: var(--font-hand);
+            font-size: 1.1rem;
+            background: var(--card-bg);
+            color: var(--ink-primary);
+            border: 2px solid var(--accent-border);
+            border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+            padding: 6px 14px;
+            cursor: pointer;
+            box-shadow: 3px 3px 0px var(--accent-border);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+        }
+
+        .sketch-btn:hover {
+            transform: translate(-1px, -2px);
+            background: var(--highlight-accent);
+            color: #000000;
+        }
+
+        .sketch-btn:hover .sketch-icon {
+            stroke: #000000;
+        }
+
+        .container {
+            max-width: 1150px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- OCEAN WAVING NAVBAR UPGRADE --- */
+        .navbar-sticky {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 9999;
+            background: var(--nav-bg);
+            backdrop-filter: blur(12px);
+            padding: 10px 0 25px 0;
+            border-bottom: 2px dashed var(--pencil-line);
+        }
+
+        /* Ocean Wave SVG Container */
+        .ocean-wave-container {
+            position: absolute;
+            bottom: -20px;
+            left: 0;
+            width: 100%;
+            height: 35px;
+            overflow: hidden;
+            line-height: 0;
+            pointer-events: none;
+        }
+
+        .ocean-wave-svg {
+            position: relative;
+            display: block;
+            width: 200%;
+            height: 100%;
+            animation: waveMove 12s linear infinite;
+        }
+
+        .wave-path-1 {
+            fill: var(--wave-fill);
+        }
+
+        .wave-path-2 {
+            fill: var(--wave-accent);
+            opacity: 0.35;
+            animation: waveMove 8s linear infinite reverse;
+        }
+
+        @keyframes waveMove {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .nav-container {
+            max-width: 1150px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .nav-brand-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            background: var(--card-bg);
+            border: 2px solid var(--accent-border);
+            border-radius: 50% 40% 50% 40%/40% 50% 40% 50%;
+            box-shadow: 3px 3px 0px var(--accent-border);
+            text-decoration: none;
+            transition: transform 0.2s ease;
+            cursor: pointer;
+        }
+
+        .nav-brand-icon:hover {
+            transform: scale(1.08) rotate(-5deg);
+            background: var(--highlight-accent);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            list-style: none;
+        }
+
+        .nav-link-item {
+            font-family: var(--font-hand);
+            font-size: 1.25rem;
+            color: var(--ink-primary);
+            text-decoration: none;
+            padding: 4px 12px;
+            border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+            border: 1.5px solid transparent;
+            transition: all 0.2s ease;
+        }
+
+        .nav-link-item:hover {
+            background: var(--highlight-accent);
+            color: #000000;
+            border-color: var(--accent-border);
+            transform: translateY(-2px) rotate(-1deg);
+            box-shadow: 2px 2px 0px var(--accent-border);
+        }
+
+        .nav-controls {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        /* CREATIVE PALETTE PICKER SELECTION DESIGN */
+        .palette-dropdown-wrapper {
+            position: relative;
+            display: inline-block;
+        }
+
+        .palette-custom-select {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-family: var(--font-hand);
+            font-size: 1.15rem;
+            font-weight: 600;
+            padding: 6px 14px;
+            background: var(--card-bg);
+            color: var(--ink-primary);
+            border: 2px solid var(--accent-border);
+            border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+            cursor: pointer;
+            box-shadow: 3px 3px 0px var(--accent-border);
+            user-select: none;
+        }
+
+        .palette-custom-select:hover {
+            background: var(--highlight-subtle);
+            transform: translateY(-1px);
+        }
+
+        .palette-preview-dots {
+            display: flex;
+            align-items: center;
+            gap: 3px;
+        }
+
+        .color-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            border: 1px solid rgba(0,0,0,0.3);
+            display: inline-block;
+        }
+
+        .palette-menu-options {
+            position: absolute;
+            top: 115%;
+            right: 0;
+            width: 230px;
+            background: var(--card-bg);
+            border: 2.5px solid var(--accent-border);
+            border-radius: 16px;
+            box-shadow: var(--sketch-shadow-hover);
+            padding: 8px;
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            z-index: 10000;
+        }
+
+        .palette-menu-options.open {
+            display: flex;
+            animation: fadeInDown 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .palette-option-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 8px 12px;
+            font-family: var(--font-hand);
+            font-size: 1.1rem;
+            color: var(--ink-primary);
+            border: 1.5px solid transparent;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.15s ease;
+        }
+
+        .palette-option-item:hover {
+            background: var(--highlight-accent);
+            color: #000000;
+            border-color: var(--accent-border);
+            transform: scale(1.02);
+        }
+
+        .palette-option-item.active {
+            border-color: var(--accent-border);
+            background: var(--highlight-subtle);
+            font-weight: bold;
+        }
+
+        .mode-toggle-btn {
+            background: var(--card-bg);
+            border: 2px solid var(--accent-border);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 3px 3px 0px var(--accent-border);
+        }
+
+        .mode-toggle-btn:hover {
+            transform: scale(1.08) rotate(10deg);
+            background: var(--highlight-accent);
+        }
+
+        .main-grid {
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            gap: 28px;
+        }
+
+        .profile-card {
+            padding: 25px 20px;
+            text-align: center;
+            height: fit-content;
+        }
+
+        .avatar-container {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 15px;
+        }
+
+        .avatar-sketch {
+            width: 100%;
+            height: 100%;
+            border-radius: 50% 45% 55% 40%/45% 55% 45% 55%;
+            border: 3px solid var(--accent-border);
+            background: var(--highlight-subtle);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 3px 4px 0px var(--accent-border);
+            overflow: hidden;
+        }
+
+        .profile-avatar-svg {
+            width: 75px;
+            height: 75px;
+            stroke: var(--svg-stroke);
+            stroke-width: 2;
+            fill: none;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .profile-name {
+            font-size: 2.2rem;
+            line-height: 1.15;
+            margin-bottom: 4px;
+        }
+
+        .profile-title {
+            font-family: var(--font-hand);
+            color: var(--ink-secondary);
+            font-size: 1.25rem;
+            margin-bottom: 15px;
+        }
+
+        .age-widget {
+            background: var(--card-bg);
+            border: 2px dashed var(--accent-border);
+            border-radius: 12px;
+            padding: 12px;
+            margin-top: 15px;
+            text-align: left;
+        }
+
+        .age-title {
+            font-family: var(--font-main);
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--ink-secondary);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .age-value {
+            font-family: var(--font-hand);
+            font-size: 1.35rem;
+            color: var(--ink-primary);
+            font-weight: bold;
+            margin-top: 2px;
+        }
+
+        .clock-widget {
+            background: var(--card-bg);
+            border: 2px solid var(--accent-border);
+            border-radius: 12px;
+            padding: 12px;
+            margin-bottom: 20px;
+            box-shadow: var(--sketch-shadow);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .clock-time {
+            font-family: var(--font-hand);
+            font-size: 1.6rem;
+            font-weight: bold;
+            line-height: 1;
+        }
+
+        .clock-date {
+            font-family: var(--font-main);
+            font-size: 0.78rem;
+            color: var(--ink-secondary);
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .content-area {
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 16px;
+            border-bottom: 2px solid var(--pencil-line);
+            padding-bottom: 8px;
+        }
+
+        .card-title {
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card-title-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--highlight-accent);
+            padding: 6px;
+            border-radius: 8px;
+            border: 1.5px solid var(--accent-border);
+        }
+
+        .card-title-icon .sketch-icon {
+            stroke: #000000;
+        }
+
+        .option-filter-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 15px;
+            padding: 10px 14px;
+            background: var(--paper-bg);
+            border: 2px dashed var(--accent-border);
+            border-radius: 12px;
+        }
+
+        .filter-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-family: var(--font-hand);
+            font-size: 1.15rem;
+            cursor: pointer;
+            user-select: none;
+            padding: 3px 10px;
+            border-radius: 8px;
+            border: 1.5px solid transparent;
+            transition: all 0.2s;
+        }
+
+        .filter-chip:hover {
+            background: var(--highlight-subtle);
+        }
+
+        .filter-chip input[type="checkbox"] {
+            appearance: none;
+            width: 16px;
+            height: 16px;
+            border: 2px solid var(--accent-border);
+            border-radius: 4px;
+            outline: none;
+            cursor: pointer;
+            position: relative;
+            background: var(--card-bg);
+        }
+
+        .filter-chip input[type="checkbox"]:checked {
+            background-color: var(--highlight-accent);
+        }
+
+        .filter-chip input[type="checkbox"]:checked::after {
+            content: '';
+            position: absolute;
+            left: 4px;
+            top: 1px;
+            width: 4px;
+            height: 8px;
+            border: solid #000000;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 14px;
+        }
+
+        .info-card {
+            background: var(--card-bg);
+            border: 1.5px solid var(--pencil-line);
+            border-radius: 12px;
+            padding: 12px 14px;
+            position: relative;
+        }
+
+        .info-card:hover {
+            border-color: var(--accent-border);
+            transform: translateY(-2px);
+        }
+
+        .info-card .label {
+            font-family: var(--font-hand);
+            font-size: 1.05rem;
+            color: var(--ink-secondary);
+            display: block;
+        }
+
+        .info-card .value {
+            font-family: var(--font-main);
+            font-weight: 600;
+            font-size: 1rem;
+            color: var(--ink-primary);
+            word-break: break-all;
+        }
+
+        .copy-btn {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            opacity: 0.6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .copy-btn:hover { opacity: 1; }
+
+        .family-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .family-card {
+            background: var(--card-bg);
+            border: 2px solid var(--accent-border);
+            border-radius: 15px;
+            padding: 16px;
+            position: relative;
+        }
+
+        .family-role {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: bold;
+            background: var(--highlight-accent);
+            color: #000000;
+            padding: 2px 10px;
+            border: 1.5px solid var(--accent-border);
+            border-radius: 6px;
+            margin-bottom: 12px;
+            transform: rotate(-1deg);
+        }
+
+        .family-role .sketch-icon {
+            stroke: #000000;
+        }
+
+        .search-wrapper {
+            position: relative;
+        }
+
+        .sketch-input {
+            width: 100%;
+            padding: 12px 18px 12px 46px;
+            font-family: var(--font-hand);
+            font-size: 1.25rem;
+            border: 2.5px solid var(--accent-border);
+            border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+            background: var(--card-bg);
+            color: var(--ink-primary);
+            box-shadow: var(--sketch-shadow);
+            outline: none;
+        }
+
+        .search-icon-wrapper {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            align-items: center;
+        }
+
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--ink-primary);
+            color: var(--paper-bg);
+            font-family: var(--font-hand);
+            font-size: 1.2rem;
+            padding: 10px 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            transform: translateY(100px);
+            opacity: 0;
+            transition: all 0.3s ease;
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .toast .sketch-icon {
+            stroke: var(--paper-bg);
+        }
+
+        .toast.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .empty-selection-msg {
+            text-align: center;
+            padding: 25px;
+            border: 2px dashed var(--pencil-line);
+            border-radius: 12px;
+            font-family: var(--font-hand);
+            font-size: 1.25rem;
+            color: var(--ink-secondary);
+        }
+
+        /* Subdomain Pop-Up Modal Styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.45);
+            backdrop-filter: blur(4px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 20000;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.25s ease;
+        }
+
+        .modal-overlay.open {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .modal-card {
+            width: 90%;
+            max-width: 420px;
+            padding: 24px;
+            background: var(--card-bg);
+            transform: scale(0.9);
+            transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .modal-overlay.open .modal-card {
+            transform: scale(1);
+        }
+
+        .modal-close-btn {
+            position: absolute;
+            top: 10px;
+            right: 14px;
+            background: transparent;
+            border: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: var(--ink-primary);
+            line-height: 1;
+        }
+
+        .subdomain-display-box {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: var(--paper-bg);
+            border: 2px dashed var(--accent-border);
+            border-radius: 10px;
+            padding: 10px 14px;
+            margin-top: 8px;
+        }
+
+        @media (max-width: 880px) {
+            .main-grid { grid-template-columns: 1fr; }
+            .family-container { grid-template-columns: 1fr; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar-sticky">
+        <div class="nav-container">
+            <a href="javascript:void(0)" class="nav-brand-icon" title="View Subdomain" onclick="openSubdomainModal()">
+                <svg class="sketch-icon" viewBox="0 0 24 24"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="#personal" class="nav-link-item">Personal</a></li>
+                <li><a href="#contact" class="nav-link-item">Contact Hub</a></li>
+                <li id="navLinkFamily" style="display: none;"><a href="#family" class="nav-link-item">Family</a></li>
+                <li><a href="#location" class="nav-link-item">Location</a></li>
+            </ul>
+
+            <div class="nav-controls">
+                <div class="palette-dropdown-wrapper">
+                    <div class="palette-custom-select" id="paletteSelectBtn" onclick="togglePaletteMenu()">
+                        <svg class="sketch-icon" viewBox="0 0 24 24"><circle cx="13.5" cy="6.5" r=".5"/><circle cx="17.5" cy="10.5" r=".5"/><circle cx="8.5" cy="7.5" r=".5"/><circle cx="6.5" cy="12.5" r=".5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.92 0 1.7-.75 1.7-1.7 0-.42-.16-.82-.42-1.12-.27-.31-.42-.71-.42-1.13 0-.95.78-1.72 1.73-1.72H17c2.76 0 5-2.24 5-5 0-5.52-4.48-9.95-10-9.95z"/></svg>
+                        <span id="selectedPaletteName">Palette</span>
+                        <span class="palette-preview-dots" id="palettePreviewDots"></span>
+                    </div>
+
+                    <div class="palette-menu-options" id="paletteMenuOptions">
+                    </div>
+                </div>
+
+                <button class="mode-toggle-btn" id="modeToggleBtn" onclick="toggleNightMode()" title="Toggle Day/Night Mode">
+                    <svg class="sketch-icon" id="modeIcon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </button>
+            </div>
+        </div>
+
+        <div class="ocean-wave-container">
+            <svg class="ocean-wave-svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path class="wave-path-1" d="M0,0 C150,90 350,-40 500,50 C650,140 900,-20 1200,40 L1200,120 L0,120 Z"></path>
+                <path class="wave-path-2" d="M0,30 C200,-20 400,80 600,20 C800,-40 1000,70 1200,10 L1200,120 L0,120 Z"></path>
+            </svg>
+        </div>
+    </nav>
+
+    <div class="container">
+        <main class="main-grid">
+            
+            <aside class="sketch-box profile-card">
+                <div class="avatar-container">
+                    <div class="avatar-sketch">
+                        <svg class="profile-avatar-svg" viewBox="0 0 24 24">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </div>
+                </div>
+
+                <h1 class="profile-name handwritten">Kawsar Ahmmed Mridul</h1>
+                <p class="profile-title">Technology Enthusiast & Student</p>
+
+                <div class="clock-widget">
+                    <svg class="sketch-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    <div>
+                        <div class="clock-time">
+                            <span id="cHours">00</span>:<span id="cMins">00</span>:<span id="cSecs">00</span>
+                            <span id="cAmpm" style="font-size: 0.85rem; color: var(--highlight-accent);">AM</span>
+                        </div>
+                    </div>
+                    <div class="clock-date" id="cDate">Loading Date...</div>
+                </div>
+
+                <div class="age-widget">
+                    <div class="age-title">
+                        <span>Exact Age Counter</span>
+                        <span style="color: var(--highlight-accent);">Live</span>
+                    </div>
+                    <div class="age-value" id="exactAge">Calculating...</div>
+                </div>
+
+                <div style="margin-top: 20px; display: flex; flex-direction: column; gap: 10px;">
+                    <button class="sketch-btn" onclick="exportData()" style="justify-content: center;">
+                        <svg class="sketch-icon" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        Export JSON Profile
+                    </button>
+                    <button class="sketch-btn" onclick="window.print()" style="justify-content: center;">
+                        <svg class="sketch-icon" viewBox="0 0 24 24"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+                        Print Page PDF
+                    </button>
+                </div>
+            </aside>
+
+            <section class="content-area">
+                
+                <div class="search-wrapper">
+                    <div class="search-icon-wrapper">
+                        <svg class="sketch-icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                    </div>
+                    <input type="text" id="searchInput" class="sketch-input" placeholder="Search phone numbers, NID, emails, locations..." onkeyup="filterProfile()">
+                </div>
+
+                <article id="personal" class="sketch-box" style="padding: 22px;">
+                    <div class="card-header">
+                        <h2 class="card-title handwritten">
+                            <span class="card-title-icon">
+                                <svg class="sketch-icon" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                            </span> 
+                            Personal Information
+                        </h2>
+                        <span class="hand-label" style="color: var(--ink-secondary);">#Primary-Info</span>
+                    </div>
+
+                    <div class="info-grid">
+                        <div class="info-card" data-search="kawsar ahmmed mridul name">
+                            <span class="label">Full Name</span>
+                            <span class="value">Kawsar Ahmmed Mridul</span>
+                            <button class="copy-btn" onclick="copyText('Kawsar Ahmmed Mridul')" title="Copy">
+                                <svg class="sketch-icon" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                            </button>
+                        </div>
+
+                        <div class="info-card" data-search="18 march 2008 birth date dob birthday">
+                            <span class="label">Date of Birth</span>
+                            <span class="value">18 March 2008</span>
+                            <button class="copy-btn" onclick="copyText('18 March 2008')" title="Copy">
+                                <svg class="sketch-icon" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                            </button>
+                        </div>
+
+                        <div class="info-card" data-search="20082611429110656 birth certificate id number">
+                            <span class="label">Birth Certificate No.</span>
+                            <span class="value" style="font-family: monospace;">20082611429110656</span>
+                            <button class="copy-btn" onclick="copyText('20082611429110656')" title="Copy">
+                                <svg class="sketch-icon" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="contact" class="sketch-box" style="padding: 22px;">
+                    <div class="card-header">
+                        <h2 class="card-title handwritten">
+                            <span class="card-title-icon">
+                                <svg class="sketch-icon" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            </span> 
+                            Contact Hub
+                        </h2>
+                        <span class="hand-label" style="color: var(--ink-secondary);">#GetInTouch</span>
+                    </div>
+
+                    <div class="option-filter-bar">
+                        <span class="hand-label" style="font-weight: bold; margin-right: 5px;">Show Contact Details:</span>
+                        <label class="filter-chip">
+                            <input type="checkbox" id="showPhoneOpt" checked onchange="toggleContactViews()"> Phone Numbers
+                        </label>
+                        <label class="filter-chip">
+                            <input type="checkbox" id="showEmailOpt" checked onchange="toggleContactViews()"> Email Addresses
+                        </label>
+                    </div>
+
+                    <div id="contactEmptyMsg" class="empty-selection-msg" style="display: none;">
+                        Please select Phone Numbers or Email Addresses above to reveal contact details.
+                    </div>
+
+                    <div class="info-grid" id="contactGrid">
+                        <div class="info-card contact-phone-item" data-search="01700914240 primary phone mobile">
+                            <span class="label">Primary Phone</span>
+                            <span class="value">
+                                <a href="tel:01700914240" style="color: inherit; text-decoration: none;">01700914240</a>
+                            </span>
+                            <button class="copy-btn" onclick="copyText('01700914240')" title="Copy">
+                                <svg class="sketch-icon" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                            </button>
+                        </div>
+
+                        <div class="info-card contact-phone-item" data-search="01756859216 secondary phone mobile">
+                            <span class="label">Secondary Phone</span>
+                            <span class="value">
+                                <a href="tel:01756859216" style="color: inherit; text-decoration: none;">01756859216</a>
+                            </span>
+                            <button class="copy-btn" onclick="copyText('01756859216')" title="Copy">
+                                <svg class="sketch-icon" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                            </button>
+                        </div>
+
+                        <div class="info-card contact-email-item" data-search="kawzahmmed@gmail.com primary email mail">
+                            <span class="label">Primary Email</span>
+                            <span class="value">
+                                <a href="mailto:Kawzahmmed@gmail.com" style="color: inherit; text-decoration: none;">Kawzahmmed@gmail.com</a>
+                            </span>
+                            <button class="copy-btn" onclick="copyText('Kawzahmmed@gmail.com')" title="Copy">
+                                <svg class="sketch-icon" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                            </button>
+                        </div>
+
+                        <div class="info-card contact-email-item" data-search="stablenight256@gmail.com secondary email mail">
+                            <span class="label">Secondary Email</span>
+                            <span class="value">
+                                <a href="mailto:Stablenight256@gmail.com" style="color: inherit; text-decoration: none;">Stablenight256@gmail.com</a>
+                            </span>
+                            <button class="copy-btn" onclick="copyText('Stablenight256@gmail.com')" title="Copy">
+                                <svg class="sketch-icon" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="family" class="sketch-box" style="padding: 22px;">
+                    <div class="card-header">
+                        <h2 class="card-title handwritten">
+                            <span class="card-title-icon">
+                                <svg class="sketch-icon" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                            </span> 
+                            Parents Information
+                        </h2>
+                        <span class="hand-label" style="color: var(--ink-secondary);">#FamilyRecords</span>
+                    </div>
+
+                    <div class="option-filter-bar">
+                        <label class="filter-chip" style="font-weight: bold;">
+                            <input type="checkbox" id="showParentsOpt" onchange="toggleParentsSection()"> Include Parents / Family Details
+                        </label>
+                    </div>
+
+                    <div id="parentsHiddenMsg" class="empty-selection-msg">
+                        Parents information is currently hidden. Check the box above to display family records.
+                    </div>
+
+                    <div class="family-container" id="parentsContainer" style="display: none;">
+                        <div class="family-card" data-search="father md. alamgir kabir 19 july 1978 8707980507 01743299982 01776585962">
+                            <span class="family-role">
+                                <svg class="sketch-icon" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                                Father
+                            </span>
+                            
+                            <div class="info-list" style="display: flex; flex-direction: column; gap: 8px;">
+                                <div>
+                                    <span class="hand-label" style="font-size: 0.95rem; color: var(--ink-secondary);">Full Name</span>
+                                    <p style="font-family: var(--font-main); font-weight: 700;">Md. Alamgir Kabir</p>
+                                </div>
+                                <div>
+                                    <span class="hand-label" style="font-size: 0.95rem; color: var(--ink-secondary);">Date of Birth</span>
+                                    <p style="font-family: var(--font-main); font-weight: 600;">19 July 1978</p>
+                                </div>
+                                <div>
+                                    <span class="hand-label" style="font-size: 0.95rem; color: var(--ink-secondary);">NID Number</span>
+                                    <p style="font-family: monospace; font-weight: 600;">8707980507</p>
+                                </div>
+                                <div>
+                                    <span class="hand-label" style="font-size: 0.95rem; color: var(--ink-secondary);">Contact Numbers</span>
+                                    <p style="font-family: var(--font-main); font-weight: 600; font-size: 0.9rem;">01743299982 / 01776585962</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="family-card" data-search="mother kulsom begum 27 january 1985">
+                            <span class="family-role">
+                                <svg class="sketch-icon" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                                Mother
+                            </span>
+                            
+                            <div class="info-list" style="display: flex; flex-direction: column; gap: 8px;">
+                                <div>
+                                    <span class="hand-label" style="font-size: 0.95rem; color: var(--ink-secondary);">Full Name</span>
+                                    <p style="font-family: var(--font-main); font-weight: 700;">Kulsom Begum</p>
+                                </div>
+                                <div>
+                                    <span class="hand-label" style="font-size: 0.95rem; color: var(--ink-secondary);">Date of Birth</span>
+                                    <p style="font-family: var(--font-main); font-weight: 600;">27 January 1985</p>
+                                </div>
+                                <div>
+                                    <span class="hand-label" style="font-size: 0.95rem; color: var(--ink-secondary);">NID Number</span>
+                                    <p style="font-family: var(--font-main); font-weight: 600; color: var(--ink-secondary); font-style: italic;">Not Available</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="location" class="sketch-box" style="padding: 22px;">
+                    <div class="card-header">
+                        <h2 class="card-title handwritten">
+                            <span class="card-title-icon">
+                                <svg class="sketch-icon" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            </span> 
+                            Address & Location
+                        </h2>
+                        <span class="hand-label" style="color: var(--ink-secondary);">#Residence</span>
+                    </div>
+
+                    <div class="info-grid">
+                        <div class="info-card" data-search="chauhat chokpara village address">
+                            <span class="label">Village</span>
+                            <span class="value">Chauhat Chokpara</span>
+                        </div>
+
+                        <div class="info-card" data-search="chauhat post office po address">
+                            <span class="label">Post Office</span>
+                            <span class="value">Chauhat</span>
+                        </div>
+
+                        <div class="info-card" data-search="ward 07 no. chauhat address">
+                            <span class="label">Ward / Division</span>
+                            <span class="value">Ward No. 07, Chauhat</span>
+                        </div>
+                    </div>
+                </article>
+
+            </section>
+        </main>
+
+        <footer style="margin-top: 50px; text-align: center; border-top: 2px dashed var(--pencil-line); padding-top: 25px;">
+            <p class="handwritten" style="font-size: 1.6rem;">Designed with Custom SVG Elements & Dynamic Themes</p>
+            <p style="font-family: var(--font-main); font-size: 0.85rem; color: var(--ink-secondary); margin-top: 5px;">
+                © 2026 All Rights Reserved | 
+                <a href="https://stablenight.com" target="_blank" style="color: var(--ink-primary); font-weight: 700; text-decoration: none; border-bottom: 2px solid var(--ink-primary);">Stablenight.com</a>
+            </p>
+        </footer>
+    </div>
+
+    <div id="toast" class="toast">
+        <svg class="sketch-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+        <span id="toastMsg">Copied to Clipboard!</span>
+    </div>
+
+    <div id="subdomainModal" class="modal-overlay" onclick="closeSubdomainModal(event)">
+        <div class="sketch-box modal-card">
+            <button class="modal-close-btn" onclick="closeSubdomainModal(null, true)">&times;</button>
+            <h3 class="handwritten" style="font-size: 1.8rem; margin-bottom: 8px;">Sub-Domain Address</h3>
+            <p style="font-family: var(--font-hand); font-size: 1.25rem; color: var(--ink-secondary); margin-bottom: 12px;">
+                This interactive profile is currently hosted at:
+            </p>
+            <div class="subdomain-display-box">
+                <span id="subdomainUrlText" style="font-weight: 700; font-family: var(--font-main);">v1.stablenight.com</span>
+                <button class="copy-btn" onclick="copyText('v1.stablenight.com')" title="Copy Link" style="position: static;">
+                    <svg class="sketch-icon" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                </button>
+            </div>
+            <div style="margin-top: 18px; text-align: right;">
+                <button class="sketch-btn" onclick="closeSubdomainModal(null, true)">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const profileData = {
+            personal: { fullName: "Kawsar Ahmmed Mridul", dob: "2008-03-18", birthCertificate: "20082611429110656" },
+            contact: { primaryPhone: "01700914240", secondaryPhone: "01756859216", primaryEmail: "Kawzahmmed@gmail.com", secondaryEmail: "Stablenight256@gmail.com" },
+            father: { fullName: "Md. Alamgir Kabir", dob: "1978-07-19", nid: "8707980507", phones: ["01743299982", "01776585962"] },
+            mother: { fullName: "Kulsom Begum", dob: "1985-01-27", nid: null },
+            address: { village: "Chauhat Chokpara", postOffice: "Chauhat", ward: "Ward No. 07, Chauhat" }
+        };
+
+        const themesConfig = {
+            light: [
+                { id: "notebook", name: "Vintage Notebook", colors: ["#fbf8f3", "#1e242b", "#fef08a"] },
+                { id: "blueprint", name: "Blueprint Paper", colors: ["#f0f7ff", "#0f4c81", "#93c5fd"] },
+                { id: "emerald", name: "Fresh Emerald", colors: ["#f0fdf4", "#064e3b", "#6ee7b7"] },
+                { id: "terracotta", name: "Warm Terracotta", colors: ["#fff7ed", "#431407", "#fdba74"] },
+                { id: "sakura", name: "Sakura Blossom", colors: ["#fff5f7", "#701a75", "#f472b6"] },
+                { id: "sunshine", name: "Golden Sunshine", colors: ["#fefce8", "#713f12", "#fde047"] }
+            ],
+            dark: [
+                { id: "midnight", name: "Midnight Blue", colors: ["#0f172a", "#38bdf8", "#f8fafc"] },
+                { id: "cyberpunk", name: "Cyberpunk Neon", colors: ["#180828", "#f43f5e", "#06b6d4"] },
+                { id: "obsidian", name: "Dark Obsidian", colors: ["#121212", "#f59e0b", "#e2e8f0"] },
+                { id: "deepforest", name: "Deep Forest", colors: ["#062319", "#10b981", "#ecfdf5"] },
+                { id: "vampire", name: "Vampire Crimson", colors: ["#1a0505", "#e11d48", "#fecdd3"] },
+                { id: "synthwave", name: "Synthwave Glow", colors: ["#0d0221", "#ff71ce", "#05ffa1"] }
+            ]
+        };
+
+        const sunSVG = `<svg class="sketch-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>`;
+        const moonSVG = `<svg class="sketch-icon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>`;
+
+        function openSubdomainModal() {
+            const modal = document.getElementById('subdomainModal');
+            modal.classList.add('open');
+        }
+
+        function closeSubdomainModal(event, forceClose = false) {
+            const modal = document.getElementById('subdomainModal');
+            if (forceClose || (event && event.target === modal)) {
+                modal.classList.remove('open');
+            }
+        }
+
+        function togglePaletteMenu() {
+            const menu = document.getElementById('paletteMenuOptions');
+            menu.classList.toggle('open');
+        }
+
+        document.addEventListener('click', function(e) {
+            const wrapper = document.querySelector('.palette-dropdown-wrapper');
+            if (wrapper && !wrapper.contains(e.target)) {
+                document.getElementById('paletteMenuOptions').classList.remove('open');
+            }
+        });
+
+        function renderPaletteMenu(mode, activeThemeId) {
+            const container = document.getElementById('paletteMenuOptions');
+            const nameDisplay = document.getElementById('selectedPaletteName');
+            const previewDots = document.getElementById('palettePreviewDots');
+            
+            container.innerHTML = '';
+            const list = themesConfig[mode];
+            const currentThemeObj = list.find(t => t.id === activeThemeId) || list[0];
+
+            nameDisplay.textContent = currentThemeObj.name;
+            previewDots.innerHTML = currentThemeObj.colors.map(c => `<span class="color-dot" style="background:${c}"></span>`).join('');
+
+            list.forEach(t => {
+                const item = document.createElement('div');
+                item.className = `palette-option-item ${t.id === activeThemeId ? 'active' : ''}`;
+                item.onclick = () => {
+                    selectTheme(t.id);
+                    document.getElementById('paletteMenuOptions').classList.remove('open');
+                };
+
+                const title = document.createElement('span');
+                title.textContent = t.name;
+
+                const dots = document.createElement('span');
+                dots.className = 'palette-preview-dots';
+                dots.innerHTML = t.colors.map(c => `<span class="color-dot" style="background:${c}"></span>`).join('');
+
+                item.appendChild(title);
+                item.appendChild(dots);
+                container.appendChild(item);
+            });
+        }
+
+        function selectTheme(themeId) {
+            const currentMode = document.documentElement.getAttribute('data-mode') || 'light';
+            document.documentElement.setAttribute('data-theme', themeId);
+            localStorage.setItem('userTheme', themeId);
+            renderPaletteMenu(currentMode, themeId);
+        }
+
+        function toggleNightMode() {
+            const currentMode = document.documentElement.getAttribute('data-mode');
+            const newMode = currentMode === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-mode', newMode);
+            
+            const defaultTheme = themesConfig[newMode][0].id;
+            document.documentElement.setAttribute('data-theme', defaultTheme);
+            
+            renderPaletteMenu(newMode, defaultTheme);
+            
+            const btn = document.getElementById('modeToggleBtn');
+            btn.innerHTML = newMode === 'dark' ? sunSVG : moonSVG;
+            
+            localStorage.setItem('userMode', newMode);
+            localStorage.setItem('userTheme', defaultTheme);
+        }
+
+        (function initThemeSettings() {
+            const savedMode = localStorage.getItem('userMode') || 'light';
+            const defaultTheme = themesConfig[savedMode][0].id;
+            const savedTheme = localStorage.getItem('userTheme') || defaultTheme;
+            
+            document.documentElement.setAttribute('data-mode', savedMode);
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            
+            renderPaletteMenu(savedMode, savedTheme);
+            document.getElementById('modeToggleBtn').innerHTML = savedMode === 'dark' ? sunSVG : moonSVG;
+        })();
+
+        function toggleContactViews() {
+            const showPhone = document.getElementById('showPhoneOpt').checked;
+            const showEmail = document.getElementById('showEmailOpt').checked;
+            
+            const phoneItems = document.querySelectorAll('.contact-phone-item');
+            const emailItems = document.querySelectorAll('.contact-email-item');
+            const emptyMsg = document.getElementById('contactEmptyMsg');
+
+            phoneItems.forEach(el => el.style.display = showPhone ? '' : 'none');
+            emailItems.forEach(el => el.style.display = showEmail ? '' : 'none');
+
+            if (!showPhone && !showEmail) {
+                emptyMsg.style.display = 'block';
+            } else {
+                emptyMsg.style.display = 'none';
+            }
+        }
+
+        function toggleParentsSection() {
+            const showParents = document.getElementById('showParentsOpt').checked;
+            const parentsContainer = document.getElementById('parentsContainer');
+            const hiddenMsg = document.getElementById('parentsHiddenMsg');
+            const navLink = document.getElementById('navLinkFamily');
+
+            if (showParents) {
+                parentsContainer.style.display = 'grid';
+                hiddenMsg.style.display = 'none';
+                navLink.style.display = 'inline-block';
+            } else {
+                parentsContainer.style.display = 'none';
+                hiddenMsg.style.display = 'block';
+                navLink.style.display = 'none';
+            }
+        }
+
+        function updateClock() {
+            const now = new Date();
+            let hours = now.getHours();
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            const ampm = hours >= 12 ? 'PM' : 'AM';
+
+            hours = hours % 12 || 12;
+            const formattedHours = String(hours).padStart(2, '0');
+
+            document.getElementById('cHours').textContent = formattedHours;
+            document.getElementById('cMins').textContent = minutes;
+            document.getElementById('cSecs').textContent = seconds;
+            document.getElementById('cAmpm').textContent = ampm;
+
+            const options = { month: 'short', day: 'numeric', year: 'numeric' };
+            document.getElementById('cDate').textContent = now.toLocaleDateString('en-US', options);
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+
+        const dobDate = new Date('2008-03-18T00:00:00');
+        function updateExactAge() {
+            const now = new Date();
+            const diffMs = now - dobDate;
+
+            const totalDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diffMs / (1000 * 60 * 60)) % 24);
+            const minutes = Math.floor((diffMs / (1000 * 60)) % 60);
+            const seconds = Math.floor((diffMs / 1000) % 60);
+
+            document.getElementById('exactAge').textContent = `${totalDays}d ${hours}h ${minutes}m ${seconds}s`;
+        }
+        setInterval(updateExactAge, 1000);
+        updateExactAge();
+
+        function filterProfile() {
+            const query = document.getElementById('searchInput').value.toLowerCase().trim();
+            const searchCards = document.querySelectorAll('[data-search]');
+
+            searchCards.forEach(card => {
+                const searchMeta = card.getAttribute('data-search').toLowerCase();
+                const textContent = card.innerText.toLowerCase();
+
+                if (searchMeta.includes(query) || textContent.includes(query)) {
+                    card.style.display = "";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        }
+
+        function copyText(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                showToast(`Copied "${text}"`);
+            });
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toastMsg').textContent = msg;
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 2500);
+        }
+
+        function exportData() {
+            const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(profileData, null, 2));
+            const anchor = document.createElement('a');
+            anchor.setAttribute("href", dataStr);
+            anchor.setAttribute("download", "Kawsar_Ahmmed_Mridul_Profile.json");
+            document.body.appendChild(anchor);
+            anchor.click();
+            anchor.remove();
+            showToast("Exported profile JSON");
+        }
+    </script>
+</body>
+</html>
